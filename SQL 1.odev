@@ -1,0 +1,25 @@
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,  -- Her çalışanın benzersiz bir kimliği olmalı (birincil anahtar).
+    FirstName VARCHAR(50),       -- Çalışanın adı (metinsel veri, maksimum 50 karakter).
+    LastName VARCHAR(50),        -- Çalışanın soyadı (metinsel veri, maksimum 50 karakter).
+    Age INT,                     -- Çalışanın yaşı (tam sayı olarak saklanır).
+    Department VARCHAR(50),      -- Çalışanın çalıştığı departman (metinsel veri).
+    Salary INT,                  -- Çalışanın maaşı (tam sayı olarak saklanır).
+    JoinDate DATE                -- Çalışanın işe giriş tarihi (tarih formatında saklanır).
+);
+Employees (EmployeeID, FirstName, LastName, Age, Department, Salary, JoinDate) VALUES
+(1, 'John', 'Doe', 30, 'IT', 55000, '2020-01-15'),
+(2, 'Jane', 'Smith', 45, 'HR', 65000, '2018-07-20'),
+(3, 'Sam', 'Brown', 28, 'IT', 52000, '2021-04-25'),
+(4, 'Lisa', 'White', 35, 'Finance', 70000, '2019-03-18'),
+(5, 'Mark', 'Black', 50, 'IT', 75000, '2015-11-05'),
+(6, 'Lucy', 'Green', 40, 'HR', 60000, '2017-10-10');
+
+
+CREATE TABLE Departments (
+    DepartmentID INT PRIMARY KEY,   -- Her departmanın benzersiz bir kimliği olmalı.
+    DepartmentName VARCHAR(50)      -- Departman adını saklar.
+);
+(1, 'IT'),
+(2, 'HR'),
+(3, 'Finance');
